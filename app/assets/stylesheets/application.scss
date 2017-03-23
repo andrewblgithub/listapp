@@ -13,3 +13,11 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+    background-color: rgba(212, 216, 212, 1.0);
+}
+
+.navbar {
+    background-color: white;
+}
