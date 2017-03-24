@@ -1,2 +1,68 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+
+    <style>
+        body {
+            background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+            url("bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+        }
+        h1 {
+            color:white;
+            font-weight: bold;
+        }
+        p {
+            color:white;
+            font-weight: 300;
+            font-size: 150%;
+        }
+        .panel {
+            display: inline-block;
+            padding: 20px;
+        }
+        .container-index {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+    </style>
+    
+    <div class="container-index row">
+        <div class="col-xs-6">
+            <h1>
+                Welcome to Listapp
+            </h1>
+            <p class="text">
+                Find out what everyone else is doing. <br>
+                Let everyone know what you're doing. <br>
+                Organize your life and never miss out again!
+            </p>
+        </div>
+        <div class="col-xs-4 col-xs-offset-2">
+            <div class="panel">
+                Log In
+                <%= form_for(:user, :url => session_path(:user)) do |f| %>
+                  <%= f.text_field :email %>
+                  <%= f.password_field :password %>
+                  <%= f.label :remember_me %>
+                  <%= f.check_box :remember_me %>
+                  <br>
+                  <%= f.submit 'Sign in' %>
+                  <br>
+                  <%= link_to "Forgot your password?", new_password_path(:user) %>
+                <% end %>
+                <br>
+                Don't have an account?
+                <br>
+                <%= link_to('Sign up here!', new_user_registration_path) %>
+            </div>
+        </div>
+    </div>
+
+<% else %>
+
+<script>
+    document.location = "/home"
+</script>
+
+<% end %>
