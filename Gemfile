@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+# datetimepicker for form
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 # Devise gem for authentication and user accounts
 gem 'devise'
 # for UI components including navbar

@@ -13,6 +13,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 
 body {
     background-color: rgba(212, 216, 212, 1.0);
@@ -20,4 +21,37 @@ body {
 
 .navbar {
     background-color: white;
+}
+
+.post-panel {
+    margin-top: -21px;
+}
+
+.post-title {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.post-content {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.post-links {
+    text-align: left;
+}
+
+.post-owner {
+    color: black;
+    font-weight: bold;
+}
+
+.post-creation {
+    opacity: 0.7;
+}
+
+.g-links {
+    text-align: left;
+    opacity: 0.7;
+    margin-right: 75px;
 }

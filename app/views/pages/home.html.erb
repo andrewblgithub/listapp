@@ -12,13 +12,30 @@
         </div>
     </div>
     <div class="col-xs-6">
+        <%= render '/components/post_form' %>
         <% for @p in @posts %>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <p><%= @p.content %></p>
+            <div class="panel panel-default post-panel">
+                <div class="panel-body">
+                    <p class="post-title">
+                        <span class="post-owner">
+                            <%= User.find(@p.user_id).username %>
+                        </span>
+                        <span class="post-creation">
+                            <%= @p.created_at.to_formatted_s(:short) %>
+                        </span>
+                    </p>
+                    <p class="post-content"><%= @p.content %></p>
+                    <p class="post-links">
+                        <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-heart g-links" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
+                        <a href="">View Conversation</a>
+                    </p>
+                </div>
             </div>
-        </div>
         <% end %>
+        <center><a href="#top"><p>Back to Top<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a></center>
     </div>
     <div class="col-xs-3">
         <div class="panel panel-default">

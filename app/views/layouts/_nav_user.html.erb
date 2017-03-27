@@ -14,7 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/home">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/user/<%= current_user.username %>">Profile</a></li>
         <li><a href="/explore">Explore</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -27,12 +28,10 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.username %>
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="/user/<%= current_user.username %>">Profile</a></li>
-            <li role="separator" class="divider"></li>
             <li><a href="/help">Help</a></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
