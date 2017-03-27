@@ -1,13 +1,26 @@
 <div class="panel panel-default">
   <div class="panel-body row">
     <%= form_for(@newPost) do |f| %>
-      <div class="field">
-        <div class="col-xs-9">
-        <%= f.text_field :content, autofocus: true, class: "form-control" %>
-        </div>
-        <div class="col-xs-3">
-        <%= f.submit "Add Post", class:"btn btn-submit btn-primary" %>
-        </div>      
+      <div class="field col-xs-8">
+        <%= f.text_field :content, autofocus: true, class: "form-control", placeholder: "Event Title" %>
+      </div>
+      <div class='col-xs-4'>
+          <div class="form-group">
+              <div class='input-group date' id='datetimepicker1'>
+                  <input type='text' class="form-control" placeholder="Date and Time" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+      </div>
+      <script type="text/javascript">
+          $(function () {
+              $('#datetimepicker1').datetimepicker();
+          });
+      </script>
+      <div class="col-xs-12">
+        <%= f.submit "Add Event", class:"btn btn-submit btn-primary form-control" %>
       </div>
     <% end %>
   </div>
