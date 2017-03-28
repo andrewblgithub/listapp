@@ -4,16 +4,13 @@
         <% for @p in @posts %>
             <div class="panel panel-default post-panel">
                 <div class="panel-body">
-                    <p class="post-title">
-                        <span class="post-owner">
-                            <%= User.find(@p.user_id).username %>
-                        </span>
-                        <span class="post-creation">
-                            <%= @p.created_at.to_formatted_s(:short) %>
-                        </span>
-                    </p>
-                    <p class="post-content"><%= @p.content %></p>
-                    <div class="countdown post-content" data-countdown="<%= Post.find(@p.id).expires_at %>"></div>
+                    <h4 class="col-xs-8">
+                        <p><%= @p.content %></p>
+                        <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
+                    </h4>
+                    <h4 class="col-xs-4">
+                        <div class="countdown post-content" data-countdown="<%= Post.find(@p.id).expires_at %>"></div>
+                    </h4>
                     <script type = "text/javascript">
                         $('[data-countdown]').each(function() {
                             var $this = $(this), finalDate = $(this).data('countdown');
@@ -25,12 +22,15 @@
                             });
                         });
                     </script>
-                    <p class="post-links">
+                    <p class="col-xs-12">
                         <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-heart g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
-                        <a href="" style="float:right;">View Conversation</a>
+                        <span class="glyphicon glyphicon-remove g-links" aria-hidden="true"></span>
+                        <span class="g-links" style="font-size:80%" aria-hidden="true">
+                            by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
+                        </span>
                     </p>
                 </div>
             </div>
@@ -74,8 +74,6 @@
                 <span>28 Likes</span><br><br>
             </div>
         </div>
-    </div>
-    <div class="col-xs-12">
         <footer><p style="opacity: .5; font-size: 90%; text-align: center;">
             @ 2017 Listapp About Help Terms Privacy Cookies Ads Info Brand Blog Status Apps Jobs Advertise Business Media Developers</p>
         </footer>
