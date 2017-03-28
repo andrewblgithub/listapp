@@ -8,10 +8,15 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use pg for Heroku database
-gem 'pg'
-# Heroku pre-req
-gem 'rails_12factor', group: :production # don't use locally, only on Heroku
+# Use squlite for dev database
+group :development, :test do
+  gem 'sqlite3'
+end
+# Use pg for Heroku database and 12factor Heroku pre-req
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

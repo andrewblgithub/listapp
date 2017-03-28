@@ -21927,3 +21927,990 @@ Processing by PagesController#profile as HTML
   Rendered layouts/_nav_user.html.erb (0.5ms)
   Rendered layouts/_nav.html.erb (4.6ms)
 Completed 200 OK in 176ms (Views: 169.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 68.198.87.146 at 2017-03-27 21:06:09 +0000
+Cannot render console from 68.198.87.146! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (14.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered pages/index.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_nav_user.html.erb (2.1ms)
+  Rendered layouts/_nav.html.erb (5.7ms)
+Completed 200 OK in 693ms (Views: 676.5ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/home" for 68.198.87.146 at 2017-03-27 21:06:10 +0000
+Cannot render console from 68.198.87.146! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendered components/_post_form.html.erb (2.1ms)
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered pages/home.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 172ms (Views: 167.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 184.153.12.55 at 2017-03-28 02:20:01 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (63.5ms)
+  Rendered layouts/_nav_guest.html.erb (0.7ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 608ms (Views: 592.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-da1b44a149fe6abbc0ab1e745c9504ff1d4582cca1cf4c495722b713c957c3c0.css?body=1" for 184.153.12.55 at 2017-03-28 02:20:03 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 184.153.12.55 at 2017-03-28 02:20:03 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/moment.self-34da66f0997d145341cfb3fc71c794ea32b4c6affa3ff5d9e7e5107170125d1c.js?body=1" for 184.153.12.55 at 2017-03-28 02:20:03 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+
+
+Started GET "/assets/bootstrap-datetimepicker.self-e6f95cebb56ba301ea62d73e475b1c3d15a97ae19bb2a8adf2bae7496174a8de.js?body=1" for 184.153.12.55 at 2017-03-28 02:20:03 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+
+
+Started POST "/users/sign_in" for 184.153.12.55 at 2017-03-28 02:20:31 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Fw9be98oa6NK4dyng/Nt8XOLcDuHHlqD1vdjBMPkJiXriGQqxj9Idt1R+AULwi0rFvknjoI07t1bkCx0Ezu8Q==", "user"=>{"email"=>"username@username.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "username@username.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-03-27 19:38:43.496743"], ["current_sign_in_at", "2017-03-28 02:20:31.299436"], ["current_sign_in_ip", "184.153.12.55"], ["sign_in_count", 16], ["updated_at", "2017-03-28 02:20:31.301253"], ["id", 2]]
+  [1m[36m (10.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://listapp-andrewbl.c9users.io/
+Completed 302 Found in 318ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 184.153.12.55 at 2017-03-28 02:20:31 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav_user.html.erb (1.4ms)
+  Rendered layouts/_nav.html.erb (4.2ms)
+Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 184.153.12.55 at 2017-03-28 02:20:32 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendered components/_post_form.html.erb (3.0ms)
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered pages/home.html.erb within layouts/application (33.0ms)
+  Rendered layouts/_nav_user.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 165ms (Views: 137.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/home" for 184.153.12.55 at 2017-03-28 02:20:39 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendered components/_post_form.html.erb (1.2ms)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered pages/home.html.erb within layouts/application (135.2ms)
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 220ms (Views: 216.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/username" for 184.153.12.55 at 2017-03-28 02:20:41 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"username"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "username"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "username"]]
+  Rendered components/_post_form.html.erb (1.1ms)
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (user_id = 2)  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pages/profile.html.erb within layouts/application (26.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 95ms (Views: 89.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/username" for 184.153.12.55 at 2017-03-28 02:20:47 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"username"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "username"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "username"]]
+  Rendered components/_post_form.html.erb (0.8ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (user_id = 2)  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered pages/profile.html.erb within layouts/application (7.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.7ms)
+Completed 200 OK in 169ms (Views: 165.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/explore" for 184.153.12.55 at 2017-03-28 02:20:48 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#explore as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pages/explore.html.erb within layouts/application (23.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 105ms (Views: 102.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/home" for 184.153.12.55 at 2017-03-28 02:20:49 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendered components/_post_form.html.erb (1.1ms)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered pages/home.html.erb within layouts/application (78.0ms)
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 153ms (Views: 149.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/explore" for 184.153.12.55 at 2017-03-28 02:23:14 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#explore as HTML
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pages/explore.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_nav_user.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.7ms)
+Completed 200 OK in 78ms (Views: 75.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/username" for 184.153.12.55 at 2017-03-28 02:23:14 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"username"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "username"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "username"]]
+  Rendered components/_post_form.html.erb (0.9ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 2)  ORDER BY "posts"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered pages/profile.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 182ms (Views: 179.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home" for 184.153.12.55 at 2017-03-28 02:23:15 +0000
+Cannot render console from 184.153.12.55! Allowed networks: 208.78.25.221, 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendered components/_post_form.html.erb (0.8ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered pages/home.html.erb within layouts/application (85.5ms)
+  Rendered layouts/_nav_user.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 147ms (Views: 144.3ms | ActiveRecord: 1.1ms)
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveExpiresAtFromPosts (20170328023102)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170328023102"]]
+  [1m[35m (12.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveExpiresAtFromPosts (20170328023255)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (4.4ms)[0m  [1mCREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" datetime) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "tindex_aposts_on_user_id_and_created_at" ON "aposts" ("user_id", "created_at")[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_aposts_on_user_id" ON "aposts" ("user_id")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "posts"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', '2017-03-25 04:55:18.409936')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL)
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id_and_created_at" ON "posts" ("user_id", "created_at")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aposts"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882')[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "aposts"
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170328023255"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddExpiresAtToPosts (20170328023601)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "posts" ADD "expires_at" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "posts" ADD "date_time" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170328023601"]]
+  [1m[35m (13.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mPost Load (3.8ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddExpiresAtToPosts (20170328023601)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" varchar, "date_time" varchar) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "tindex_aposts_on_user_id_and_created_at" ON "aposts" ("user_id", "created_at")
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "tindex_aposts_on_user_id" ON "aposts" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","date_time") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL, NULL)[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "posts"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" varchar) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_posts_on_user_id_and_created_at" ON "posts" ("user_id", "created_at")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "aposts"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "aposts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_aposts_on_user_id_and_created_at" ON "aposts" ("user_id", "created_at")[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_aposts_on_user_id" ON "aposts" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL)
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id_and_created_at" ON "posts" ("user_id", "created_at")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "aposts"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aposts"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170328023601"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddExpiresAtToPosts (20170328023757)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "posts" ADD "expires_at" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "posts" ADD "datetime" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170328023757"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddExpiresAtToPosts (20170328023757)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" varchar, "datetime" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "tindex_aposts_on_user_id_and_created_at" ON "aposts" ("user_id", "created_at")
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_aposts_on_user_id" ON "aposts" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at","datetime") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL, NULL)[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "posts"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" varchar) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_posts_on_user_id_and_created_at" ON "posts" ("user_id", "created_at")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "aposts"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL)[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "aposts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "expires_at" varchar) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_aposts_on_user_id_and_created_at" ON "aposts" ("user_id", "created_at")[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "tindex_aposts_on_user_id" ON "aposts" ("user_id")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aposts" ("id","content","user_id","created_at","updated_at","expires_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882', NULL)
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aposts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id_and_created_at" ON "posts" ("user_id", "created_at")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "aposts"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (1, 'test post', 2, '2017-03-23 20:21:14.802110', '2017-03-25 04:55:20.388925')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (2, 'test post #2', 2, '2017-03-23 20:21:24.322329', '2017-03-23 20:21:24.322329')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (3, 'the first rule of listapp is we are an exercise in futility', 2, '2017-03-23 20:21:48.073538', '2017-03-23 20:21:48.073538')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (4, 'something to post', 3, '2017-03-23 21:03:56.609947', '2017-03-23 21:03:56.609947')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (5, 'yada yada', 3, '2017-03-23 21:04:04.276770', '2017-03-23 21:04:04.276770')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (6, 'this is a post about politics and the government and other cool things', 4, '2017-03-24 03:09:36.618736', '2017-03-24 03:09:36.618736')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (7, 'have you ever heard of the tragedy of darth plaigeus the wise? I thought not. It''s not a story the jedi would tell you. It''s a sith legend.', 2, '2017-03-24 20:18:36.786159', '2017-03-24 20:18:36.786159')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (8, 'what is my name? who am I?', 2, '2017-03-25 04:34:55.723484', '2017-03-25 04:34:55.723484')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (9, 'just added a datetimepicker but not sure how to implement', 2, '2017-03-27 16:06:11.617422', '2017-03-27 16:06:11.617422')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (10, 'The datepicker is in the form! Next is to implement it into the db...', 2, '2017-03-27 16:35:07.546355', '2017-03-27 16:35:07.546355')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "posts" ("id","content","user_id","created_at","updated_at") VALUES (11, 'Now I need a counteown timer', 2, '2017-03-27 19:39:26.745882', '2017-03-27 19:39:26.745882')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aposts"
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170328023757"]]
+  [1m[35m (13.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddExpiresAtToPosts (20170328024111)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "posts" ADD "expires_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170328024111"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id_and_created_at' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  [1m[36mSQL (12.6ms)[0m  [1mUPDATE "posts" SET "expires_at" = '2017-08-01 16:06:11' WHERE "posts"."id" IN (SELECT "posts"."id" FROM "posts"  ORDER BY "posts"."created_at" DESC)[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
