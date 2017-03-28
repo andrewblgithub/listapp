@@ -7,18 +7,15 @@
       <div class='col-xs-4'>
           <div class="form-group">
               <div class='input-group date' id='datetimepicker1'>
-                  <input type='text' class="form-control" placeholder="Date and Time" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
+                  <%= f.datetime_select :expires_at, class: "form-control", placeholder: "Date and Time" %>
               </div>
           </div>
+          <script type="text/javascript">
+              $(function () {
+                  $('#datetimepicker1').datetimepicker();
+              });
+          </script>
       </div>
-      <script type="text/javascript">
-          $(function () {
-              $('#datetimepicker1').datetimepicker();
-          });
-      </script>
       <div class="col-xs-12">
         <%= f.submit "Add Event", class:"btn btn-submit btn-primary form-control" %>
       </div>

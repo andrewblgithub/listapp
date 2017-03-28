@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# countdown-timer jquery
+gem 'jquery-final_countdown-rails'
 # datetimepicker for form
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
