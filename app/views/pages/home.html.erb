@@ -2,36 +2,37 @@
     <div class="col-xs-8">
         <%= render '/components/post_form' %>
         <% for @p in @posts %>
-            <div class="panel panel-default post-panel">
-                <div class="panel-body">
-                    <h4 class="col-xs-8">
-                        <p><%= @p.content %></p>
-                        <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
-                    </h4>
-                    <h4 class="col-xs-4">
-                        <div class="countdown post-content" data-countdown="<%= Post.find(@p.id).expires_at %>"></div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        <div class="countdown" data-countdown="<%= Post.find(@p.id).expires_at %>"></div>
                     </h4>
                     <script type = "text/javascript">
                         $('[data-countdown]').each(function() {
                             var $this = $(this), finalDate = $(this).data('countdown');
                             $this.countdown(finalDate, function(event) {
-                              $this.html(event.strftime('%D:singular,plural; days <br> %H:%M:%S'));
+                              $this.html(event.strftime('%D:singular,plural; days %H hours %M minutes %S seconds'));
                             });
                             $this.on('finish.countdown', function(event){
                                 $(this).text("Completed!");
                             });
                         });
                     </script>
-                    <p class="col-xs-12">
+                </div>
+                <div class="panel-body">
+                    <h4>
+                        <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
+                        <p></p><%= @p.content %></p>
+                    </h4>
+                    <footer>
                         <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-heart g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-remove g-links" aria-hidden="true"></span>
                         <span class="g-links" style="font-size:80%" aria-hidden="true">
                             by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
                         </span>
-                    </p>
+                    </footer>
                 </div>
             </div>
         <% end %>
