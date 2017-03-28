@@ -1,96 +1,11 @@
-<!-- Jumbotron removed***
-<div class="row">
-    <div class="col-sm-12">
-        <div class="jumbotron">
-        </div>
-    </div>
-</div>
--->
-
-<!-- begin row 2 -->
 <div class="row">
     <div class="col-sm-8">
         <%= render '/components/post_form' %>
-        <% for @p in @posts %>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4>
-                        <div class="countdown" data-countdown="<%= Post.find(@p.id).expires_at %>"></div>
-                    </h4>
-                    <script type = "text/javascript">
-                        $('[data-countdown]').each(function() {
-                            var $this = $(this), finalDate = $(this).data('countdown');
-                            $this.countdown(finalDate, function(event) {
-                              $this.html(event.strftime('%D:singular,plural; days %H hours %M minutes %S seconds'));
-                            });
-                            $this.on('finish.countdown', function(event){
-                                $(this).text("Completed!");
-                            });
-                        });
-                    </script>
-                </div>
-                <div class="panel-body">
-                    <h4>
-                        <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
-                        <p></p><%= @p.content %></p>
-                    </h4>
-                    <footer>
-                        <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-heart g-links" aria-hidden="true"></span>
-                        <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
-                        <span class="g-links" style="font-size:80%" aria-hidden="true">
-                            by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
-                        </span>
-                    </footer>
-                </div>
-            </div>
-        <% end %>
-        <div class="panel panel-default post-panel panel-body">
-            <center><a href="#top"><p class="opacity: 0.7;">
-                Back to Top<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-            </p></a></center>
-        </div>    
+        <%= render '/layouts/posts' %>
     </div>
     <div class="col-sm-4">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h4><%= @username %>'s Profile</h4>
-                    </div>
-                    <div class="col-sm-6" style="opacity: 0.7; font-size: 80%;">
-                        POSTED EVENTS<br>
-                        <h6 style="font-size: 200%;">16</h6>
-                    </div>
-                    <div class="col-sm-6" style="opacity: 0.7; font-size: 80%;">
-                        SAVED EVENTS<br>
-                        <h6 style="font-size: 200%;">15</h6>
-                    </div>
-                    <div class="col-sm-6" style="opacity: 0.7; font-size: 80%;">
-                        CREATED GROUPS<br>
-                        <h6 style="font-size: 200%;">2</h6>
-                    </div>
-                    <div class="col-sm-6" style="opacity: 0.7; font-size: 80%;">
-                        JOINED GROUPS<br>
-                        <h6 style="font-size: 200%;">4</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h4>Groups</h4>
-                <a href="">Group X</a><br>
-                <span>12 Events</span><br><br>
-                <a href="">Group Y</a><br>
-                <span>8 Events</span><br><br>
-                <a href="">Group Z</a><br>
-                <span>15 Events</span><br><br>
-            </div>
-        </div>
-        <footer><p style="opacity: .5; font-size: 90%; text-align: center;">
-            @ 2017 Listapp About Help Terms Privacy Cookies Ads Info Brand Blog Status Apps Jobs Advertise Business Media Developers</p>
-        </footer>
+        <%= render '/layouts/profile_stats' %>
+        <%= render '/layouts/groups' %>
+        <%= render '/layouts/footer' %>
     </div>
 </div>
