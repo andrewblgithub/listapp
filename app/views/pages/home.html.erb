@@ -13,13 +13,18 @@
                         </span>
                     </p>
                     <p class="post-content"><%= @p.content %></p>
-                    <div class="countdown post-content">
-                        <script type="text/javascript">
-                          $('.countdown').countdown('<%= Post.find(@p.id).expires_at %>', function(event) {
-                            $(this).html(event.strftime('%D DAYS %H:%M:%S'));
-                          });
-                        </script>
-                    </div>
+                    <div class="countdown post-content" data-countdown="<%= Post.find(@p.id).expires_at %>"></div>
+                    <script type = "text/javascript">
+                        $('[data-countdown]').each(function() {
+                            var $this = $(this), finalDate = $(this).data('countdown');
+                            $this.countdown(finalDate, function(event) {
+                              $this.html(event.strftime('%D:singular,plural; days <br> %H:%M:%S'));
+                            });
+                            $this.on('finish.countdown', function(event){
+                                $(this).text("Completed!");
+                            });
+                        });
+                    </script>
                     <p class="post-links">
                         <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
