@@ -9,9 +9,9 @@ class PostsController < ApplicationController
         @post.user_id = current_user.id # assign post to user who created it
         respond_to do |f|
             if (@post.save)
-                f.html { redirect_to "", notice: "Post created!" }
+                f.html { redirect_to :back, notice: "Post created!" }
             else
-                f.html { redirect_to "", notice: "Error: post not saved!" }
+                f.html { redirect_to :back, notice: "Error: post not saved!" }
             end
         end
     end
@@ -19,7 +19,24 @@ class PostsController < ApplicationController
     def destroy
         @post = Post.find(params[:id])
         @post.destroy
-        redirect_to ""
+        redirect_to :back
+    end
+    
+    def like
+        @post = Post.find(params[:id])
+        @post.liked_by current_user
+        redirect_to :back
+    end
+    
+    def unlike
+        @post = Post.find(params[:id])
+        @post.unliked_by current_user
+        redirect_to :back
+    end
+    
+    def show
+        @post=Post.find(params[:id])
+        @new_comment = Comment.build_from(@post, current_user.id, "")
     end
     
     private

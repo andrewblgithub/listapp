@@ -17,12 +17,14 @@
                 <h6 style="font-size: 200%;">15</h6>
             </div>
             <div class="col-sm-6" style="opacity: 0.7; font-size: 80%;">
-                CREATED GROUPS<br>
+                COMMENTS<br>
                 <h6 style="font-size: 200%;">2</h6>
             </div>
             <div class="col-sm-6" style="opacity: 0.7; font-size: 80%;">
-                JOINED GROUPS<br>
-                <h6 style="font-size: 200%;">4</h6>
+                LIKED EVENTS<br>
+                <h6 style="font-size: 200%;">
+                    <%= current_user.find_liked_items.count %>
+                </h6>
             </div>
         </div>
     </div>

@@ -24,8 +24,18 @@
             <footer>
                 <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
-                <span class="glyphicon glyphicon-heart g-links" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
+                <span class="g-links" aria-hidden="true">
+                    <% if current_user.voted_for? @p %>
+                    <%= link_to unlike_post_path(@p), method: :put, class: 'btn btn-primary' do %>
+                    Like <%= @p.get_upvotes.size %>
+                    <% end %>
+                    <% else %>
+                    <%= link_to like_post_path(@p), method: :put, class: 'btn btn-default' do %>
+                    Like <%= @p.get_upvotes.size %>
+                    <% end %>
+                    <% end %>
+                </span>
                 <span class="g-links" aria-hidden="true">
                     <%= link_to "Delete", @p, :data => {:confirm => "Are you sure?"}, :method => :delete %>
                 </span>
@@ -40,4 +50,4 @@
     <center><a href="#top"><p class="opacity: 0.7;">
         Back to Top<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
     </p></a></center>
-</div>    
+</div>

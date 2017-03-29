@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :posts
+  resources :posts do
+   member do
+    put "like", to: "posts#like"
+    put "unlike", to: "posts#unlike"
+   end
+  end
   # Define Root URL
   root 'pages#index'
   

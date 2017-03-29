@@ -14,6 +14,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'bootstrap-datetimepicker';
+@import "font-awesome";
+
+@font-face {
+    font-family: 'Remachine'; src: font-url('RemachineScript_Personal_Use.ttf') format('truetype');
+}
 
 body {
     background-color: rgba(212, 216, 212, 1.0);
@@ -28,4 +33,9 @@ body {
     text-align: left;
     opacity: 0.7;
     margin-right: 75px;
+}
+
+.navbar-brand {
+  font-family: "Remachine";
+  font-size: 350%;
 }

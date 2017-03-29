@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
+ruby "2.3.3"
+# acts_as_commentable with threading!!
+gem 'acts_as_commentable_with_threading'
+# acts_as_votable add likes function
+gem 'acts_as_votable', '~> 0.10.0'
+# font-awesome icons and fonts!
+gem "font-awesome-rails"
 # countdown-timer jquery
 gem 'jquery-final_countdown-rails'
 # datetimepicker for form
