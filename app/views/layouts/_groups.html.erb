@@ -1,11 +1,21 @@
-<div class="panel panel-default">
-    <div class="panel-body">
-        <h4>Groups</h4>
-        <a href="">Group X</a><br>
-        <span>12 Events</span><br><br>
-        <a href="">Group Y</a><br>
-        <span>8 Events</span><br><br>
-        <a href="">Group Z</a><br>
-        <span>15 Events</span><br><br>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">
+            Current List: My Group <span class="caret"></span>
+        </a>
+      </h4>
     </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <ul class="list-group">
+        <li class="list-group-item">Random Saved List</li>
+        <li class="list-group-item">Concerts</li>
+        <li class="list-group-item">Birthdays</li>
+      </ul>
+      <div class="panel-footer">
+        <a href="">More Groups</a>
+      </div>
+    </div>
+  </div>
 </div>
