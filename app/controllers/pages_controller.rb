@@ -3,11 +3,14 @@ class PagesController < ApplicationController
   
   # back-end code for pages/index
   def index
+    @posts = Post.all
+    @newPost = Post.new
   end
 
   # back-end code for pages/home
   def home
-    @posts = Post.all
+    @username = current_user[:username]
+    @posts = Post.all.where(:user_id => current_user.id)
     @newPost = Post.new
   end
   
@@ -20,13 +23,19 @@ class PagesController < ApplicationController
       # redirect to 404 (root for now)
       redirect_to root_path, :notice=> "User not found!"
     end
-    
     @posts = Post.all.where("user_id = ?", User.find_by_username(params[:id]).id)
     @newPost = Post.new
   end
   
   # back-end code for pages/explore
   def explore
-    @posts = Post.all
+    if !user_signed_in?
+      @posts = Post.all
+      @newPost = Post.new
+    else
+      @username = current_user[:username]
+      @posts = Post.all.where.not(:user_id => current_user.id)
+      @newPost = Post.new
+    end
   end
 end
