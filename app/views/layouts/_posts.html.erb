@@ -20,28 +20,34 @@
             <h4>
                 <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
                 <p></p><%= @p.content %></p>
+                                <span class="g-links" style="font-size:80%" aria-hidden="true">
+                    by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
+                </span>
             </h4>
             <footer>
-                <span class="glyphicon glyphicon-comment g-links" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
                 <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
                 <span class="g-links" aria-hidden="true">
-                    <% if current_user.voted_for? @p %>
-                    <%= link_to unlike_post_path(@p), method: :put, class: 'btn btn-primary' do %>
-                    Like <%= @p.get_upvotes.size %>
-                    <% end %>
-                    <% else %>
-                    <%= link_to like_post_path(@p), method: :put, class: 'btn btn-default' do %>
-                    Like <%= @p.get_upvotes.size %>
-                    <% end %>
-                    <% end %>
-                </span>
-                <span class="g-links" aria-hidden="true">
                     <%= link_to "Delete", @p, :data => {:confirm => "Are you sure?"}, :method => :delete %>
                 </span>
-                <span class="g-links" style="font-size:80%" aria-hidden="true">
-                    by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
+                <span class="g-links" aria-hidden="true">
+                    <% if current_user.voted_for? @p %>
+                    <%= link_to unlike_post_path(@p), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
+                        <%= @p.get_upvotes.size %>
+                    <% end %>
+                    <% else %>
+                    <%= link_to like_post_path(@p), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
+                        <%= @p.get_upvotes.size %>
+                    <% end %>
+                    <% end %>
                 </span>
+                <span class="g-links btn btn-default glyphicon glyphicon-comment" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                </span>
+                <div class="collapse" id="collapseExample">
+                    <div class="well">
+                        <%= render '/comments/form' %>
+                    </div>
+                </div>
             </footer>
         </div>
     </div>

@@ -12,6 +12,7 @@ class PagesController < ApplicationController
     @username = current_user[:username]
     @posts = Post.all.where(:user_id => current_user.id)
     @newPost = Post.new
+    @comment = Comment.new
   end
   
   # back-end code for pages/profile
