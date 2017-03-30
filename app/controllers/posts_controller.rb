@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
+        
+    def show
+        @post=Post.find(params[:id])
+    end
     
     def new
-       @post = Post.new
+        @post = Post.new
     end
     
     def create
@@ -32,10 +36,6 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
         @post.unliked_by current_user
         redirect_to :back
-    end
-    
-    def show
-        @post=Post.find(params[:id])
     end
     
     private

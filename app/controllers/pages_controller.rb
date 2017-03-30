@@ -9,10 +9,8 @@ class PagesController < ApplicationController
 
   # back-end code for pages/home
   def home
-    @username = current_user[:username]
-    @posts = Post.all.where(:user_id => current_user.id)
+    @posts = Post.all
     @newPost = Post.new
-    @comment = Comment.new
   end
   
   # back-end code for pages/profile
