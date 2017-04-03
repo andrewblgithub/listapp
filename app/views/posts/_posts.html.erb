@@ -19,8 +19,10 @@
         <div class="panel-body">
             <h4>
                 <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
-                <p></p><%= @p.content %></p>
-                                <span class="g-links" style="font-size:80%" aria-hidden="true">
+                <p>
+                    <%= @p.content %>
+                </p>
+                <span class="g-links" style="font-size:80%" aria-hidden="true">
                     by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
                 </span>
             </h4>
