@@ -1,0 +1,19 @@
+<div class="row">
+    <div class = "col-xs-12">
+        <% @post.comments.each do |comment| %>
+            <span class="g-links" aria-hidden="true">
+                <%= comment.username %>  
+            </span>
+            <p>
+                <%= comment.content %>
+            </p>
+            <span class="g-links" aria-hidden="true">
+                <%= comment.created_at.strftime("%l:%M %p") %>
+            </span>
+            <span class="g-links" aria-hidden="true">
+                  <%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+            </span>
+            <hr>
+        <% end %>
+    </div>
+</div>

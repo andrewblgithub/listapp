@@ -20,7 +20,7 @@
             <h4>
                 <p style="opacity:.7; font-size: 70%;"><%= Post.find(@p.id).expires_at %></p>
                 <p>
-                    <%= @p.content %>
+                    <%= link_to (@p.content), post_path(@p) %>
                 </p>
                 <span class="g-links" style="font-size:80%" aria-hidden="true">
                     by <%= User.find(@p.user_id).username %> on <%= @p.created_at.strftime("%m-%d-%Y") %>
@@ -47,7 +47,8 @@
                 </span>
                 <div class="collapse comment-well">
                     <div class="well">
-                        Comments
+                        <%= render 'comments/comments' %>
+                        <%= render 'comments/comments_form' %>
                     </div>
                 </div>
             </footer>
