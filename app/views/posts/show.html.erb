@@ -24,36 +24,26 @@
             </span>
         </h4>
         <footer>
-            <span class="glyphicon glyphicon-plus g-links" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-option-horizontal g-links" aria-hidden="true"></span>
-            <span class="g-links" aria-hidden="true">
-                <%= link_to "Delete", @post, :data => {:confirm => "Are you sure?"}, :method => :delete %>
-            </span>
             <span class="g-links" aria-hidden="true">
                 <% if current_user.voted_for? @post %>
                 <%= link_to unlike_post_path(@post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
-                    <%= @post.get_upvotes.size %>
+                    <%= @post.cached_votes_total %>
                 <% end %>
                 <% else %>
                 <%= link_to like_post_path(@post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
-                    <%= @post.get_upvotes.size %>
+                    <%= @post.cached_votes_total %>
                 <% end %>
                 <% end %>
             </span>
-            <span class="g-links btn btn-default glyphicon glyphicon-comment" data-toggle="collapse" data-target=".comment-well" aria-expanded="false">
-            </span>
-            <div class="collapse comment-well">
+            <div class="comment-well">
                 <div class="well">
                     <%= render 'comments/comments' %>
                     <%= render 'comments/comments_form' %>
                 </div>
             </div>
+            <span class="g-links" aria-hidden="true">
+                <%= link_to "Delete", @post, :data => {:confirm => "Are you sure?"}, :method => :delete %>
+            </span>
         </footer>
     </div>
-</div>
-
-<div class="panel panel-default post-panel panel-body">
-    <center><a href="#top"><p class="opacity: 0.7;">
-        Back to Top<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-    </p></a></center>
 </div>

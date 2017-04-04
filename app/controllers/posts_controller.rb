@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
     
+    before_action :set_new_post
+    
     def index
-        @newPost = Post.new
         @posts = Post.all
     end
         
     def show
-        @newPost = Post.new
         @post=Post.find(params[:id])
     end
     
@@ -15,7 +15,6 @@ class PostsController < ApplicationController
     end
     
     def new
-        @newPost = Post.new
     end
     
     def create
@@ -47,4 +46,9 @@ class PostsController < ApplicationController
     def post_params # allows certain data to be passed via form
         params.require(:post).permit(:user_id, :content, :expires_at)
     end
+    
+    def set_new_post
+        @newPost = Post.new
+    end
+    
 end
