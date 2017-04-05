@@ -17,6 +17,7 @@
     </div>
     <div class="panel-body">
         <h4>
+            <%= image_tag @post.image_url %>
             <p style="opacity:.7; font-size: 70%;"><%= Post.find(@post.id).expires_at %></p>
             <p><%= @post.content %></p>
             <span class="g-links" style="font-size:80%" aria-hidden="true">

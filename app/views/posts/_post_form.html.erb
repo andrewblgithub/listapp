@@ -1,10 +1,10 @@
 <div class="panel panel-default">
   <div class="panel-body row">
     <%= form_for(@newPost) do |f| %>
-      <div class="field col-sm-8">
+      <div class="field col-sm-6">
         <%= f.text_field :content, autofocus: true, class: "form-control", placeholder: "Event Title" %>
       </div>
-      <div class='col-sm-4'>
+      <div class='col-sm-6'>
           <div class="form-group">
               <div class='input-group date' id='datetimepicker1'>
                   <%= f.datetime_select :expires_at, class: "form-control", placeholder: "Date and Time" %>
@@ -17,6 +17,15 @@
           </script>
       </div>
       <div class="col-sm-12">
+          <%= f.file_field :image %>
+          <br>
+          <% if f.object.image? %>
+              <%= image_tag f.object.image.thumb.url %>
+              <%= f.label :remove_image %>
+              <%= f.check_box :remove_image %> 
+          <% end %>
+      </div>
+      <div class="col-sm-4 col-sm-offset-8">
         <%= f.submit "Add Event", class:"btn btn-submit btn-primary form-control" %>
       </div>
     <% end %>

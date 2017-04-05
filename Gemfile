@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 ruby "2.3.3"
+# categories and such
+gem 'acts-as-taggable-on'
+# image management
+gem 'carrierwave'
+gem 'mini_magick'
 # acts_as_votable add likes function
 gem 'acts_as_votable', '~> 0.10.0'
 # font-awesome icons and fonts!

@@ -44,7 +44,7 @@ class PostsController < ApplicationController
     
     private
     def post_params # allows certain data to be passed via form
-        params.require(:post).permit(:user_id, :content, :expires_at)
+        params.require(:post).permit(:user_id, :content, :expires_at, :tag_list)
     end
     
     def set_new_post
