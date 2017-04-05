@@ -21,13 +21,13 @@ class PostsController < ApplicationController
         @post = Post.new(post_params)
         @post.user_id = current_user.id # assign post to user who created it
         @post.save
-        redirect to :back
+        redirect_to :back
     end
     
     def destroy
         @post = Post.find(params[:id])
         @post.destroy
-        redirect_to :back
+        redirect_to posts_url
     end
     
     def like
