@@ -3,7 +3,8 @@ class PostsController < ApplicationController
     before_action :set_new_post
     
     def index
-        @posts = Post.all
+        @tag="Birthdays"
+        @posts=Post.tagged_with(@tag)
     end
         
     def show
@@ -27,7 +28,7 @@ class PostsController < ApplicationController
     def destroy
         @post = Post.find(params[:id])
         @post.destroy
-        redirect_to posts_url
+        redirect_to "/"
     end
     
     def like
@@ -44,7 +45,7 @@ class PostsController < ApplicationController
     
     private
     def post_params # allows certain data to be passed via form
-        params.require(:post).permit(:user_id, :content, :expires_at, :tag_list)
+        params.require(:post).permit(:user_id, :content, :description, :expires_at, :tag_list)
     end
     
     def set_new_post

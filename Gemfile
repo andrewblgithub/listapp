@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.3"
+# jquery bootstrap selecter
+gem 'bootstrap-select-rails'
 # categories and such
 gem 'acts-as-taggable-on'
 # image management

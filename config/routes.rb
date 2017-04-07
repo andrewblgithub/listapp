@@ -8,11 +8,12 @@ Rails.application.routes.draw do
     put "unlike", to: "posts#unlike"
    end
   end
+  resources :tags
   # Define Root URL
   root 'pages#index'
   
   # Define routes for pages
-  get '/home' => 'pages#home' #override default routes
+  # get '/home' => 'pages#home' #override default routes
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

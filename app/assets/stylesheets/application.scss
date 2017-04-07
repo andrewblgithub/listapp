@@ -15,13 +15,14 @@
 @import "bootstrap";
 @import 'bootstrap-datetimepicker';
 @import "font-awesome";
+@import 'bootstrap-select';
 
 @font-face {
-    font-family: 'Remachine'; src: font-url('RemachineScript_Personal_Use.ttf') format('truetype');
+    font-family: 'Remachine'; src: font-url('SansPosterBold.ttf') format('truetype');
 }
 
 body {
-    background-color: rgba(212, 216, 212, 1.0);
+    background-color: rgba(212, 216, 212, 0.5);
     padding-top: 70px;
 }
 
@@ -37,9 +38,14 @@ body {
 
 .navbar-brand {
     font-family: "Remachine";
-    font-size: 350%;
+    font-size: 300%;
 }
 
 .well {
     margin-top: 10px;
+}
+
+.panel-heading {
+    background-color: #d2edf4;
+    background-image: linear-gradient(to bottom, #f9f2c9, #e1bc97 100%);
 }

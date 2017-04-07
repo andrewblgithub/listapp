@@ -24,6 +24,9 @@
             by <%= User.find(@post.user_id).username %> on <%= @post.created_at.strftime("%m-%d-%Y") %>
             </span>
         </h4>
+        <p>
+            <%= @post.description %>
+        </p>
         <footer>
             <span class="g-links" aria-hidden="true">
                 <% if current_user.voted_for? @post %>
@@ -44,6 +47,9 @@
             </div>
             <span class="g-links" aria-hidden="true">
                 <%= link_to "Delete", @post, :data => {:confirm => "Are you sure?"}, :method => :delete %>
+            </span>
+            <span class="g-links" aria-hidden="true">
+                List: <%= @post.tag_list %>
             </span>
         </footer>
     </div>

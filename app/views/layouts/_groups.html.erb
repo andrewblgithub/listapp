@@ -2,17 +2,21 @@
   <div class="panel panel-default">
     <div class="panel-heading clearfix">
       <h4 class="panel-title">
-        <a class="btn btn-default" data-toggle="collapse" href="#collapse1">
-          Current List: All <span class="caret text-right"></span>
-        </a>
-        <span style="float:right;" aria-hidden="true" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">New Countdown</span>
+        <div style="float:left;">
+          <select class="selectpicker" data-live-search="true" data-width="fit">
+            <% ActsAsTaggableOn::Tag.all.each do |t| %>
+              <option><%= t %></option>
+            <% end %>
+          </select>         
+        </div>
+        <span style="float:right;" aria-hidden="true" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">New Event</span>
       </h4>
-    </div>  
+    </div>
     <div id="collapse1" class="panel-collapse collapse">
       <ul class="list-group">
-        <li class="list-group-item">Random Saved List</li>
-        <li class="list-group-item">Concerts</li>
-        <li class="list-group-item">Birthdays</li>
+        <li class="list-group-item"><%= ActsAsTaggableOn::Tag.most_used.second %></li>
+        <li class="list-group-item"><%= ActsAsTaggableOn::Tag.most_used.third %></li>
+        <li class="list-group-item"><%= ActsAsTaggableOn::Tag.most_used.fourth %></li>
       </ul>
       <div class="panel-footer">
         <a href="">More Groups</a>
