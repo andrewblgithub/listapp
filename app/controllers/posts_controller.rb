@@ -1,55 +1,68 @@
 class PostsController < ApplicationController
     
-    before_action :set_new_post
-    
+    before_action :set_list
+
     def index
-        @tag="Birthdays"
-        @posts=Post.tagged_with(@tag)
+        @posts = @list.posts
+        #@posts = Post.all
+        #@posts = Post.filter(params.slice(:list))
+        #respond_to do |format|
+        #    format.html
+        #    format.js
+        #end
     end
-        
+
     def show
-        @post=Post.find(params[:id])
+        @post = @list.posts.find(params[:id])
     end
     
     def edit
-        @post=Post.find(params[:id])
+        @post=@list.posts.find(params[:id])
     end
     
-    def new
-    end
-    
-    def create
-        @post = Post.new(post_params)
-        @post.user_id = current_user.id # assign post to user who created it
-        @post.save
+    def update
+        @post=@list.posts.find(params[:id])
+        @post.update(post_params)
         redirect_to :back
     end
     
+    def new
+        @post = Post.new
+    end
+    
+    def create
+        @post = @list.posts.create(post_params)
+        @post.user_id = current_user.id # assign post to user who created it
+        @post.username = current_user.username
+        @post.save
+        redirect_to list_posts_path(@list)
+    end
+    
     def destroy
-        @post = Post.find(params[:id])
+        @post=@list.posts.find(params[:id])
         @post.destroy
         redirect_to "/"
     end
     
     def like
-        @post = Post.find(params[:id])
+        @post=@list.posts.find(params[:id])
         @post.liked_by current_user
         redirect_to :back
     end
     
     def unlike
-        @post = Post.find(params[:id])
+        @post=@list.posts.find(params[:id])
         @post.unliked_by current_user
         redirect_to :back
     end
     
     private
-    def post_params # allows certain data to be passed via form
-        params.require(:post).permit(:user_id, :content, :description, :expires_at, :tag_list)
+    def post_params
+        params.require(:post).permit(:user_id, :content, :description, :expires_at, :list)
     end
     
-    def set_new_post
-        @newPost = Post.new
+    def set_list
+        @list=List.find(params[:list_id])
     end
     
 end

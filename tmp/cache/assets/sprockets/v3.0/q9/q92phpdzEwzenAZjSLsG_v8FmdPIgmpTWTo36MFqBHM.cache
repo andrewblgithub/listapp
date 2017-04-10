@@ -1,0 +1,21 @@
+I""(function() {
+  $(function() {
+    return $(document).on('change', '#list_select', function(evt) {
+      return $.ajax('index', {
+        type: 'GET',
+        dataType: 'script',
+        data: {
+          tag_list: $("#list_select option:selected").val()
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return console.log("AJAX Error: " + textStatus);
+        },
+        success: function(data, textStatus, jqXHR) {
+          return console.log("List select OK!");
+        }
+      });
+    });
+  });
+
+}).call(this);
+:ET

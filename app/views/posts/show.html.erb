@@ -1,7 +1,8 @@
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>
-            <div class="countdown" data-countdown="<%= Post.find(@post.id).expires_at %>"></div>
+            <div class="countdown" data-countdown="<%= @post.expires_at %>"></div>
         </h4>
         <script type = "text/javascript">
             $('[data-countdown]').each(function() {
@@ -18,10 +19,10 @@
     <div class="panel-body">
         <h4>
             <%= image_tag @post.image_url %>
-            <p style="opacity:.7; font-size: 70%;"><%= Post.find(@post.id).expires_at %></p>
+            <p style="opacity:.7; font-size: 70%;"><%= Post.find(@post.id).expires_at.strftime("%-m-%-d-%Y %l:%M %p") %></p>
             <p><%= @post.content %></p>
             <span class="g-links" style="font-size:80%" aria-hidden="true">
-            by <%= User.find(@post.user_id).username %> on <%= @post.created_at.strftime("%m-%d-%Y") %>
+            by <%= User.find(@post.user_id).username %> on <%= @post.created_at.strftime("%-m-%-d-%Y") %>
             </span>
         </h4>
         <p>
@@ -30,26 +31,26 @@
         <footer>
             <span class="g-links" aria-hidden="true">
                 <% if current_user.voted_for? @post %>
-                <%= link_to unlike_post_path(@post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
+                <%= link_to unlike_list_post_path(@post.list, @post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
                     <%= @post.cached_votes_total %>
                 <% end %>
                 <% else %>
-                <%= link_to like_post_path(@post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
+                <%= link_to like_list_post_path(@post.list, @post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
                     <%= @post.cached_votes_total %>
                 <% end %>
                 <% end %>
             </span>
-            <div class="comment-well">
-                <div class="well">
-                    <%= render 'comments/comments' %>
-                    <%= render 'comments/comments_form' %>
-                </div>
+            <div>
+                <%= render 'comments/comments_panel' %>
             </div>
             <span class="g-links" aria-hidden="true">
-                <%= link_to "Delete", @post, :data => {:confirm => "Are you sure?"}, :method => :delete %>
+                <%= link_to 'Edit', edit_list_post_path(@post.list, @post), data: { toggle: 'modal', target:"#myModaledit"} %>
             </span>
             <span class="g-links" aria-hidden="true">
-                List: <%= @post.tag_list %>
+                <%= link_to "Delete", [@post.list, @post], :data => {:confirm => "Are you sure?"}, :method => :delete %>
+            </span>
+            <span class="g-links" aria-hidden="true">
+                List: <%= @list.name %>
             </span>
         </footer>
     </div>

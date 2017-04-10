@@ -1,0 +1,5 @@
+          <%= form_for(@tag, url: tag_path(@tag)) do |f| %>
+            <%= f.select :name, ActsAsTaggableOn::Tag.all.map{ |c| [c.name] }, {}, {:class => "selectpicker", :onchange => "();"}%>
+          <% end %>
+          
+          <%= f.text_field :tag_list, value: f.object.tag_list.to_s, class: "form-control"%>

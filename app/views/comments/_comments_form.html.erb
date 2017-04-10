@@ -1,7 +1,7 @@
 <div class="panel-body row">
-    <%= form_for([@post, @post.comments.build]) do |f| %>
+    <%= form_for [@list, @post, @post.comments.build], :remote => true do |f| %>
         <div class="field col-sm-10">
-            <%= f.text_field :content, autofocus: true, class: "form-control", placeholder: "Add Comment" %>
+            <%= f.text_field :content, class: "form-control", placeholder: "Add Comment" %>
         </div>
         <div class="col-sm-2">
             <%= f.submit "Submit", class:"btn btn-submit btn-primary form-control" %>

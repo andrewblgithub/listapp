@@ -1,16 +1,21 @@
 Rails.application.routes.draw do
   
   devise_for :users
-  resources :posts do
-   resources :comments
-   member do
-    put "like", to: "posts#like"
-    put "unlike", to: "posts#unlike"
+  resources :lists do
+   resources :posts do
+    resources :comments
+    member do
+     put "like", to: "posts#like"
+     put "unlike", to: "posts#unlike"
+    end
    end
   end
   resources :tags
   # Define Root URL
   root 'pages#index'
+  get '/help' => 'pages#help'
+  get '/lists/:id/posts' => 'lists#index'
+  
   
   # Define routes for pages
   # get '/home' => 'pages#home' #override default routes

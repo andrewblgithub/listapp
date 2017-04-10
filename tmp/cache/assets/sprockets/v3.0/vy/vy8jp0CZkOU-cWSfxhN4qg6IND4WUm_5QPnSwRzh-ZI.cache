@@ -1,0 +1,23 @@
+I"Å(function() {
+  $(function() {
+    return $(document).on('change', '#list_select', function(evt) {
+      return $.ajax('index', {
+        type: 'GET',
+        dataType: 'script',
+        data: {
+          country_id: $("#list_select option:selected").val()
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          return console.log("AJAX Error: " + textStatus);
+        },
+        success: function(data, textStatus, jqXHR) {
+          return console.log("List select OK!");
+        }
+      });
+    });
+  });
+
+  $("#list_select").empty().append("<%= escape_javascript(render(:partial => @posts)) %>");
+
+}).call(this);
+:ET

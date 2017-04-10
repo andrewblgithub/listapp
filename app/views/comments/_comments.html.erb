@@ -11,7 +11,7 @@
                 <%= comment.created_at.strftime("%l:%M %p") %>
             </span>
             <span class="g-links" aria-hidden="true">
-                  <%= link_to 'Delete', [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Delete', [@list, comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
             </span>
             <hr>
         <% end %>

@@ -1,17 +1,13 @@
 <div class="panel panel-default">
   <div class="panel-body row">
-    <%= form_for(@newPost) do |f| %>
+    <%= form_for([@list, @list.posts.build])do|f| %>
       <div class="field col-sm-12">
           Event Title:
           <%= f.text_field :content, autofocus: true, class: "form-control"%>
       </div>
       <div class="field col-sm-12">
           Event Description:
-          <%= f.text_field :description, autofocus: true, class: "form-control"%>
-      </div>
-      <div class="field col-sm-6">
-          List:
-          <%= f.text_field :tag_list, value: f.object.tag_list.to_s, class: "form-control"%>
+          <%= f.text_field :description, class: "form-control"%>
       </div>
       <div class='col-sm-12'>
           <div class="form-group">

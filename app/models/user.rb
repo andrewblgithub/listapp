@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
          
          has_many :posts
          has_many :comments
+         has_many :lists
   acts_as_voter
 end

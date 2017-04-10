@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-body row">
+    <%= form_for(@newList)do|f| %>
+      <div class="field col-sm-12" style="margin-bottom:15px;">
+          Create New List:
+          <%= f.text_field :name, autofocus: true, class: "form-control"%>
+      </div>
+      <div class="col-sm-4 col-sm-offset-8">
+          <%= f.submit "Create List", class:"btn btn-submit btn-primary form-control" %>
+      </div>
+    <% end %>
+  </div>
+</div>
