@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-body row">
-    <%= form_for([@list, @list.posts.build])do|f| %>
+    <%= form_for([@list, @post])do|f| %>
       <div class="field col-sm-12">
           Event Title:
           <%= f.text_field :content, autofocus: true, class: "form-control"%>

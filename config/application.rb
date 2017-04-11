@@ -24,5 +24,8 @@ module Listapp
     config.active_record.raise_in_transactional_callbacks = true
     # config for font in app assets/fonts
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    # set time-zone
+    #config.time_zone = 'Eastern Time (US & Canada)'
+    #config.active_record.default_timezone = :local
   end
 end

@@ -1,12 +1,16 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4>
-            <%= link_to @list.name, list_posts_path(@list) %>
+            My Lists
         </h4>
     </div>
     <div class="panel-body">
-        <footer>
-            <%= link_to "List Options" %>
-        </footer>
+        <p>
+            <% for @list in @lists %>
+                <%= link_to @list.name, list_posts_path(@list) %>
+                <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
+                <hr>
+            <% end %>
+        </p>
     </div>
 </div>

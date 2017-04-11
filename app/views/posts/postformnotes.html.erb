@@ -32,3 +32,11 @@
         </footer>
         
         <span style="float:right;" aria-hidden="true" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">New Event</span>
+        
+        
+        
+              <div class="field col-sm-12">
+          List: <br>
+          <%= f.select :list, Post.uniq.pluck(:list), {}, {:class => "selectpicker", :onchange => "();"}%>
+          <div style="float:right;"><%= f.text_field :list, class: "form-control", placeholder: "Or Create New List"%></div>
+      </div>

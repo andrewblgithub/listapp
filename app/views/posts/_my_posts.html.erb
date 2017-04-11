@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <a data-toggle="collapse" data-target="#collapseMyPosts">
+                <h4>My Countdowns<span class="caret"></span></h4>
+            </a>
+        </div>
+        <div id="collapseMyPosts" class="panel-collapse">
+        <div class="panel-body">
+            <% Post.all.where("user_id = ?", current_user).each do |post| %>
+                <%= link_to post.content, [post.list, post] %>
+                	&nbsp;
+                <hr>
+            <% end %>
+        </div>
+    </div>
+</div>

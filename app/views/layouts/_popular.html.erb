@@ -1,9 +1,27 @@
 <div class="panel panel-default">
-    <div class="panel-body">
-        <h4>Most Likes</h4>
-        <% Post.all.reorder(:cached_votes_total => :desc).limit(5).each do |post| %>
-        <%= link_to post.content, [post.list, post] %></a><br>
-        <br>
-        <% end %>
+        <div class="panel-heading">
+            <a data-toggle="collapse" data-target="#collapsePopular">
+                <h4>Most Likes<span class="caret"></span></h4>
+            </a>
+        </div>
+        <div id="collapsePopular" class="panel-collapse">
+        <div class="panel-body">
+            <% Post.all.reorder(:cached_votes_total => :desc).limit(5).each do |post| %>
+                <%= link_to post.content, [post.list, post] %>
+                	&nbsp;
+                <span class="g-links" aria-hidden="true">
+                    <% if current_user.voted_for? post %>
+                    <%= link_to unlike_list_post_path(post.list, post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
+                        <%= post.cached_votes_total %>
+                    <% end %>
+                    <% else %>
+                    <%= link_to like_list_post_path(post.list, post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
+                        <%= post.cached_votes_total %>
+                    <% end %>
+                    <% end %>
+                </span>
+                <hr>
+            <% end %>
+        </div>
     </div>
 </div>

@@ -49,3 +49,17 @@ body {
     background-color: #d2edf4;
     background-image: linear-gradient(to bottom, #f9f2c9, #e1bc97 100%);
 }
+
+.badge-notify {
+    z-index: 100;
+    position:relative;
+    -moz-transform: translate(-90%, 80%); /* For Firefox */
+    -ms-transform: translate(-90%, 80%); /* for IE */
+    -webkit-transform: translate(-90%, 80%); /* For Safari, Chrome, iOS */
+    -o-transform: translate(-90%, 80%); /* For Opera */
+}
+
+.comments-scroll {
+    max-height: 300px;
+    overflow-y:scroll; 
+}

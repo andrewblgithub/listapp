@@ -1,9 +1,29 @@
 <div class="panel panel-default">
-    <div class="panel-body">
-        <h4>Ending Soonest</h4>
-        <% Post.all.reorder(:expires_at => :asc).limit(5).each do |post| %>
-        <%= link_to post.content, [post.list, post] %></a><br>
-        <br>
-        <% end %>
+    <div class="panel-heading">
+        <a data-toggle="collapse" data-target="#collapseUpcoming">
+            <h4>Ending Soonest<span class="caret"></span></h4>
+        </a>
+    </div>
+    <div id="collapseUpcoming" class="panel-collapse">
+        <div class="panel-body">
+            <% Post.all.reorder(:expires_at => :asc).limit(5).each do |post| %>
+                <%= link_to post.content, [post.list, post] %></a>
+                <p>
+                    <div class="countdown" data-countdown="<%= post.expires_at %>"></div>
+                </p>
+                <hr>
+                <script type = "text/javascript">
+                    $('[data-countdown]').each(function() {
+                        var $this = $(this), finalDate = $(this).data('countdown');
+                        $this.countdown(finalDate, function(event) {
+                            $this.html(event.strftime('%-D:singular,plural; days %-H hours %-M minutes %-S seconds'));
+                        });
+                        $this.on('finish.countdown', function(event){
+                            $(this).text("Completed!");
+                        });
+                    });
+                </script>
+            <% end %>
+        </div>
     </div>
 </div>

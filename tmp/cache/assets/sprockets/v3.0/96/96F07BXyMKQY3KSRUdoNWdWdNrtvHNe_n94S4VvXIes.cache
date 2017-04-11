@@ -1,0 +1,15 @@
+I"Ÿ(function() {
+  $('[data-countdown]').each(function() {
+    var $this, finalDate;
+    $this = $(this);
+    finalDate = $(this).data('countdown');
+    $this.countdown(finalDate, function(event) {
+      $this.html(event.strftime('%-D:singular,plural; days %-H hours %-M minutes %-S seconds'));
+    });
+    $this.on('finish.countdown', function(event) {
+      $(this).text('Completed!');
+    });
+  });
+
+}).call(this);
+:ET

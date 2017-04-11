@@ -9,6 +9,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
+        <span class="glyphicon glyphicon-bell"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">New Comment!</a></li>
+          <li><a href="#">New Countdown!</a></li>
+          <li><a href="#">New List Invite!</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See More<span style="float:right;" class="glyphicon glyphicon-chevron-right"></span></a></li>
+        </ul>
+      </div>
+      
+        <span class="badge badge-notify">5</span>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,18 +34,14 @@
             </div>
           </form>
         </li>
-
-
-            <li><a href="/help">Help</a></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
-            <li role="separator" class="divider"></li>
-            <li><%= link_to('Log Out', destroy_user_session_path, :method => :delete)%> </li>
-
-
-        <!--<li type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></li>
-        -->
+        <li><a href="/help">Help</a></li>
+        <li role="separator" class="divider"></li>
+        <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>
+        <li role="separator" class="divider"></li>
+        <li><%= link_to('Log Out', destroy_user_session_path, :method => :delete)%> </li>
+        <!--<li type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></li>-->
       </ul>
     </div><!-- /.navbar-collapse -->
+    
   </div><!-- /.container-fluid -->
 </nav>
