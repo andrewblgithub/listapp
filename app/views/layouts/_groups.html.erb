@@ -4,11 +4,33 @@
     <div class="panel-heading clearfix">
       <h4 class="panel-title">
         <div style="float:left;">
-          <select class="selectpicker"></select>
-          <%= link_to "New Post", new_list_post_path %>
+          <a class="btn btn-default" data-toggle="collapse" data-target="#collapseGroup">
+            <%= @list.name %>
+            <span class="glyphicon glyphicon-menu-down"></span>
+          </a>
         </div>
-        <span style="float:right;" aria-hidden="true" type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">New Event</span>
+        <div style="float:right;">
+          <%= link_to new_list_post_path, class:'btn btn-default' do%>
+          <span class="glyphicon glyphicon-plus"></span> Countdown
+          <% end %>
+        </div>
       </h4>
+    </div>
+    <div id="collapseGroup" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="panel">
+          <%= link_to "Create New List", new_list_path %>
+        </div>
+        <% List.all.each do |list| %>
+          <div class="panel">
+            <br>
+            <%= link_to list.name, list_posts_path(list) %>
+            <div style="float:right;">
+              <span class="glyphicon glyphicon-cog"></span>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

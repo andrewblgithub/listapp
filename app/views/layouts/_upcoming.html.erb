@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <h4>Most Likes</h4>
-        <% Post.all.reorder(:cached_votes_total => :desc).limit(5).each do |post| %>
+        <h4>Ending Soonest</h4>
+        <% Post.all.reorder(:expires_at => :asc).limit(5).each do |post| %>
         <%= link_to post.content, [post.list, post] %></a><br>
         <br>
         <% end %>
