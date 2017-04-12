@@ -42,6 +42,17 @@
                         <% end %>
                         <% end %>
                     </span>
+                    <span class="g-links" aria-hidden="true">
+                        <% if (post.comments.count > 0) %>
+                        <%= link_to [post.list, post], class: 'glyphicon glyphicon-comment btn btn-warning' do%>
+                            <%= post.comments.count %>
+                        <% end %>
+                        <% else %>
+                        <%= link_to [post.list, post], class: 'glyphicon glyphicon-comment btn btn-default' do%>
+                            <%= post.comments.count %>
+                        <% end %>
+                        <% end %>
+                    </span>
                 </footer>
             </div>
         </div>
