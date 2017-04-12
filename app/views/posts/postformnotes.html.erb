@@ -40,3 +40,14 @@
           <%= f.select :list, Post.uniq.pluck(:list), {}, {:class => "selectpicker", :onchange => "();"}%>
           <div style="float:right;"><%= f.text_field :list, class: "form-control", placeholder: "Or Create New List"%></div>
       </div>
+      
+            <div class="col-sm-12">
+          Image:
+          <%= f.file_field :image %>
+          <br>
+          <% if f.object.image? %>
+              <%= image_tag f.object.image.thumb.url %>
+              <%= f.label :remove_image %>
+              <%= f.check_box :remove_image %> 
+          <% end %>
+      </div>

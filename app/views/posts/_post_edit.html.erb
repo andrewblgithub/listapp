@@ -10,11 +10,9 @@
           <%= f.text_field :description, class: "form-control"%>
       </div>
       <div class='col-sm-12'>
-          <div class="form-group">
-              <div class='input-group date' id='datetimepicker1'>
-                  Date and Time:
-                  <%= f.datetime_select :expires_at, class: "form-control", placeholder: "Date and Time" %>
-              </div>
+          <div class='input-group date' id='datetimepicker1'>
+              Date and Time:
+              <%= f.datetime_select :expires_at, class: "form-control", placeholder: "Date and Time" %>
           </div>
           <script type="text/javascript">
               $(function () {
@@ -22,14 +20,10 @@
               });
           </script>
       </div>
-      <div class="col-sm-12">
-          <%= f.file_field :image %>
+      <div class="col-sm-8">
+          Image URL:
+          <%= f.text_field :image, class: "form-control" %>
           <br>
-          <% if f.object.image? %>
-              <%= image_tag f.object.image.thumb.url %>
-              <%= f.label :remove_image %>
-              <%= f.check_box :remove_image %> 
-          <% end %>
       </div>
       <div class="col-sm-4 col-sm-offset-8">
           <%= f.submit "Update Event", class:"btn btn-submit btn-primary form-control" %>

@@ -20,7 +20,10 @@
             </div>
             <div class="panel-body">
                 <h4>
-                    <%= image_tag @post.image_url %>
+                    <div style="margin-right: -30px;">
+                    <img class="img-responsive-show" src="<%=@post.image %>" >
+                    </div>
+                    <br>
                     <p style="opacity:.7; font-size: 70%;"><%= Post.find(@post.id).expires_at.strftime("%-m-%-d-%Y %l:%M %p") %></p>
                     <p><%= @post.content %></p>
                     <span class="g-links" style="font-size:80%" aria-hidden="true">
@@ -42,9 +45,6 @@
                         <% end %>
                         <% end %>
                     </span>
-                    <div>
-                        <%= render 'comments/comments_panel' %>
-                    </div>
                     <span class="g-links" aria-hidden="true">
                         <%= link_to 'Edit', edit_list_post_path(@post.list, @post), data: { toggle: 'modal', target:"#myModaledit"} %>
                     </span>
@@ -54,6 +54,9 @@
                     <span class="g-links" aria-hidden="true">
                         List: <%= @list.name %>
                     </span>
+                    <div>
+                        <%= render 'comments/comments_panel' %>
+                    </div>
                 </footer>
             </div>
         </div>

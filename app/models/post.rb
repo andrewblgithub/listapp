@@ -8,7 +8,6 @@ class Post < ActiveRecord::Base
   
   default_scope -> { order(expires_at: :asc) } # soonest posts first
   
-  mount_uploader :image, ImageUploader
   acts_as_votable
   acts_as_taggable # Alias for acts_as_taggable_on :tags
   
