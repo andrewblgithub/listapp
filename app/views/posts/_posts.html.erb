@@ -1,65 +1,37 @@
-<% @list.posts.each do |post| %>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4>
-                <div class="countdown" data-countdown="<%= post.expires_at %>"></div>
-            </h4>
-            <script type = "text/javascript">
-                $('[data-countdown]').each(function() {
-                    var $this = $(this), finalDate = $(this).data('countdown');
-                    $this.countdown(finalDate, function(event) {
-                        $this.html(event.strftime('%-D:singular,plural; days %-H hours %-M minutes %-S seconds'));
-                    });
-                    $this.on('finish.countdown', function(event){
-                        $(this).text("Completed!");
-                    });
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4>
+            <div class="countdown" data-countdown="<%= post.expires_at %>"></div>
+        </h4>
+        <script type = "text/javascript">
+            $('[data-countdown]').each(function() {
+                var $this = $(this), finalDate = $(this).data('countdown');
+                $this.countdown(finalDate, function(event) {
+                    $this.html(event.strftime('%-D:singular,plural; days %-H hours %-M minutes %-S seconds'));
                 });
-            </script>
+                $this.on('finish.countdown', function(event){
+                    $(this).text("Completed!");
+                });
+            });
+        </script>
+    </div>
+    <div class="panel-body">
+        <div class="col-sm-6">
+            <img class="img-responsive-posts" src="<%=post.image %>">
         </div>
-        <div class="panel-body">
-            <div class="col-sm-6">
-                <img class="img-responsive-posts" src="<%=post.image %>">
-            </div>
-            <div class="col-sm-6">
-                <h4>
-                    <p style="opacity:.7; font-size: 70%;"><%= post.expires_at.strftime("%-m-%-d-%Y %l:%M %p") %></p>
-                    <p>
-                        <%= link_to post.content, [post.list, post] %>
-                    </p>
-                    <span class="g-links" style="font-size:80%" aria-hidden="true">
-                        by <%= post.username %> on <%= post.created_at.strftime("%-m-%-d-%Y") %>
-                    </span>
-                </h4>
-                <footer>
-                    <span class="g-links" aria-hidden="true">
-                        <% if current_user.voted_for? post %>
-                        <%= link_to unlike_list_post_path(post.list, post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
-                            <%= post.cached_votes_total %>
-                        <% end %>
-                        <% else %>
-                        <%= link_to like_list_post_path(post.list, post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
-                            <%= post.cached_votes_total %>
-                        <% end %>
-                        <% end %>
-                    </span>
-                    <span class="g-links" aria-hidden="true">
-                        <% if (post.comments.count > 0) %>
-                        <%= link_to [post.list, post], class: 'glyphicon glyphicon-comment btn btn-warning' do%>
-                            <%= post.comments.count %>
-                        <% end %>
-                        <% else %>
-                        <%= link_to [post.list, post], class: 'glyphicon glyphicon-comment btn btn-default' do%>
-                            <%= post.comments.count %>
-                        <% end %>
-                        <% end %>
-                    </span>
-                </footer>
-            </div>
+        <div class="col-sm-6">
+            <h4>
+                <p style="opacity:.7; font-size: 70%;"><%= post.expires_at.strftime("%-m-%-d-%Y %l:%M %p") %></p>
+                <p>
+                    <%= link_to post.content, [post.list, post] %>
+                </p>
+                <span class="g-links" style="font-size:80%" aria-hidden="true">
+                    by <%= post.username %> on <%= post.created_at.strftime("%-m-%-d-%Y") %>
+                </span>
+            </h4>
+            <footer>
+                <%= render 'posts/likes_comments', :post => post %>
+            </footer>
         </div>
     </div>
-<% end %>
-<div class="panel panel-default post-panel panel-body">
-    <center><a href="#top"><p class="opacity: 0.7;">
-        Back to Top<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-    </p></a></center>
 </div>

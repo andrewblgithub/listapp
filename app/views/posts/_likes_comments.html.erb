@@ -1,0 +1,16 @@
+<span>
+    <% if current_user.voted_for? post %>
+    <%= link_to unlike_list_post_path(post.list, post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
+    <% end %>
+    <%= post.cached_votes_total %> Likes
+    <% else %>
+    <%= link_to like_list_post_path(post.list, post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
+    <% end %>
+    <%= post.cached_votes_total %> Likes
+    <% end %>
+</span>
+<span>
+    <%= link_to [post.list, post], class: 'btn btn-links' do%>
+        <%= post.comments.count %> Comments
+    <% end %>
+</span>

@@ -34,17 +34,7 @@
                     <%= @post.description %>
                 </p>
                 <footer>
-                    <span class="g-links" aria-hidden="true">
-                        <% if current_user.voted_for? @post %>
-                        <%= link_to unlike_list_post_path(@post.list, @post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-primary' do %>
-                            <%= @post.cached_votes_total %>
-                        <% end %>
-                        <% else %>
-                        <%= link_to like_list_post_path(@post.list, @post), method: :put, class: 'glyphicon glyphicon-thumbs-up btn btn-default' do %>
-                            <%= @post.cached_votes_total %>
-                        <% end %>
-                        <% end %>
-                    </span>
+                    <%= render 'posts/likes_comments', :post => @post %>
                     <span class="g-links" aria-hidden="true">
                         <%= link_to 'Edit', edit_list_post_path(@post.list, @post), data: { toggle: 'modal', target:"#myModaledit"} %>
                     </span>

@@ -4,13 +4,8 @@ ruby "2.3.3"
 gem 'bootstrap-select-rails'
 # categories and such
 gem 'acts-as-taggable-on'
-# image management
-gem 'carrierwave'
-gem 'mini_magick'
 # acts_as_votable add likes function
 gem 'acts_as_votable', '~> 0.10.0'
-# font-awesome icons and fonts!
-gem "font-awesome-rails"
 # countdown-timer jquery
 gem 'jquery-final_countdown-rails'
 # datetimepicker for form

@@ -14,11 +14,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'bootstrap-datetimepicker';
-@import "font-awesome";
 @import 'bootstrap-select';
 
 @font-face {
-    font-family: 'Remachine'; src: font-url('SansPosterBold.ttf') format('truetype');
+    font-family: 'SansPosterBold'; src: font-url('SansPosterBold.ttf') format('truetype');
+}
+
+.glyphicon {
+    font-family: inherit;
+}
+.glyphicon:before{
+    font-family:'Glyphicons Halflings';
 }
 
 body {
@@ -30,14 +36,8 @@ body {
     background-color: white;
 }
 
-.g-links {
-    text-align: left;
-    opacity: 0.7;
-    margin-right: 25px;
-}
-
 .navbar-brand {
-    font-family: "Remachine";
+    font-family: "SansPosterBold";
     font-size: 300%;
 }
 
@@ -53,10 +53,12 @@ body {
 .badge-notify {
     z-index: 100;
     position:relative;
+    margin-right: -30px;
     -moz-transform: translate(-90%, 80%); /* For Firefox */
     -ms-transform: translate(-90%, 80%); /* for IE */
     -webkit-transform: translate(-90%, 80%); /* For Safari, Chrome, iOS */
     -o-transform: translate(-90%, 80%); /* For Opera */
+    background-color: #ff4d4d;
 }
 
 .comments-scroll {

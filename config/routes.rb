@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   # Define Root URL
   root 'pages#index'
   get '/help' => 'pages#help'
+  get '/all' => 'pages#all'
+  get '/most_likes' => 'pages#most_likes'
   get '/lists/:id/posts' => 'lists#index'
-  
   
   # Define routes for pages
   # get '/home' => 'pages#home' #override default routes
