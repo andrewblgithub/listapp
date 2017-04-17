@@ -8,6 +8,8 @@
             <%= "All Lists" %>
             <% elsif current_page?('/most_likes') %>
             <%= "Most Likes" %>
+            <% elsif current_page?('/completed') %>
+            <%= "Completed" %>
             <% else %>
             <%= @list.name %>
             <% end %>
@@ -16,21 +18,25 @@
       </a>
       <span class="pull-right">
       <% if controller.controller_name == "posts" %>
-        <%= link_to new_list_post_path, class:"btn btn-primary float-right", style:"margin-top:6px;" do%>
+        <%= link_to new_list_post_path, class:"btn btn-default float-right", style:"margin-top:6px;" do%>
           <span class="glyphicon glyphicon-plus"></span> New Countdown
         <% end %>
       <% end %>
       </span>
     </div>
     
-
-    
     <div id="collapseGroup" class="panel-collapse collapse">
       <div class="panel-body">
+        <h4>Filter by:</h4>
+        <br>
         <%= link_to "All Lists", '/all' %>
         <hr>
         <%= link_to "Most Liked", '/most_likes' %>
         <hr>
+        <%= link_to "Completed", '/completed' %>
+        <hr>
+        <h4>My Subscribed Lists:</h4>
+        <br>
         <% List.all.each do |list| %>
           <%= link_to list.name, list_posts_path(list) %>
           <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>

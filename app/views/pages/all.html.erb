@@ -2,7 +2,9 @@
     <div class="col-sm-8 col-sm-offset-2">
         <%= render 'layouts/groups' %>
         <% Post.all.each do |post| %>
-            <%= render 'posts/posts', :post => post %>
+            <% if post.expires_at > Time.now %>
+                <%= render 'posts/posts', :post => post %>
+            <% end %>
         <% end %>
         <%= render 'layouts/footer' %>
     </div>

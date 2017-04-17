@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/help' => 'pages#help'
   get '/all' => 'pages#all'
   get '/most_likes' => 'pages#most_likes'
+  get '/completed' => 'pages#completed'
   get '/lists/:id/posts' => 'lists#index'
   
   # Define routes for pages
