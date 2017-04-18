@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.3.3"
+# helpers for timezone localization
+gem 'local_time'
 # jquery bootstrap selecter
 gem 'bootstrap-select-rails'
 # categories and such

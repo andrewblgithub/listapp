@@ -19,3 +19,4 @@
 //= require jquery.countdown
 //= require bootstrap-datetimepicker
 //= require bootstrap-select
+//= require local_time

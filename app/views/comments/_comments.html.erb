@@ -8,7 +8,7 @@
                 <%= comment.content %>
             </p>
             <span class="g-links" aria-hidden="true">
-                <%= comment.created_at.strftime("%l:%M %p") %>
+                <%= local_time_ago(comment.created_at) %>
             </span>
             <span class="g-links" aria-hidden="true">
                   <%= link_to 'Delete', [@list, comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>

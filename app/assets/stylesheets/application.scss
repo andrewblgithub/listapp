@@ -34,6 +34,9 @@ body {
 
 .navbar {
     background-color: white;
+    max-height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch; // mobile safari
 }
 
 .navbar-brand {
@@ -43,11 +46,6 @@ body {
 
 .well {
     margin-top: 10px;
-}
-
-.panel-heading {
-    background-color: #d2edf4;
-    background-image: linear-gradient(to bottom, #f9f2c9, #e1bc97 100%);
 }
 
 .badge-notify {
@@ -79,4 +77,11 @@ body {
     //margin-top: -15px;
     height: 150px;
     object-fit: cover;
+}
+
+.affix {
+}
+
+.g-links {
+    opacity: .7;
 }

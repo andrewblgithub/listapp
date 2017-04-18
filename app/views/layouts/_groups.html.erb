@@ -1,49 +1,34 @@
-<div class="panel-group">
-  <div class="panel panel-default">
-    
-    <div class="panel-heading">
-      <a class="btn btn-links btn-xs text-left" data-toggle="collapse" data-target="#collapseGroup">
+<div class="panel panel-default hidden-xs">
+    <div class="panel-body">
         <h4>
-            <% if current_page?('/all') %>
-            <%= "All Lists" %>
-            <% elsif current_page?('/most_likes') %>
-            <%= "Most Likes" %>
-            <% elsif current_page?('/completed') %>
-            <%= "Completed" %>
-            <% else %>
-            <%= @list.name %>
-            <% end %>
-            <span class="glyphicon glyphicon-menu-down"></span>
+                <% if current_page?('/all') %>
+                <%= "All Lists" %>
+                <% elsif current_page?('/completed') %>
+                <%= "Completed" %>
+                <% elsif current_page?('/most_likes') %>
+                <%= "Most Likes" %>
+                <% else %>
+                <%= @list.name.truncate(12) %>
+                <% end %>
         </h4>
-      </a>
-      <span class="pull-right">
-      <% if controller.controller_name == "posts" %>
-        <%= link_to new_list_post_path, class:"btn btn-default float-right", style:"margin-top:6px;" do%>
-          <span class="glyphicon glyphicon-plus"></span> New Countdown
-        <% end %>
-      <% end %>
-      </span>
-    </div>
-    
-    <div id="collapseGroup" class="panel-collapse collapse">
-      <div class="panel-body">
+        <hr>
         <h4>Filter by:</h4>
         <br>
         <%= link_to "All Lists", '/all' %>
         <hr>
-        <%= link_to "Most Liked", '/most_likes' %>
+        <%= link_to "Most Likes", '/most_likes' %>
         <hr>
         <%= link_to "Completed", '/completed' %>
         <hr>
         <h4>My Subscribed Lists:</h4>
         <br>
         <% List.all.each do |list| %>
-          <%= link_to list.name, list_posts_path(list) %>
-          <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
-          <hr>
+            <%= link_to list.name, list_posts_path(list) %>
+            <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
+            <hr>
         <% end %>
-      </div>
+        <%= link_to new_list_path, class:"btn btn-default" do%>
+        <span class="glyphicon glyphicon-plus"></span> New List
+        <% end %>
     </div>
-    
-  </div>
 </div>

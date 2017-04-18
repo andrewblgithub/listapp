@@ -1,5 +1,8 @@
 <%= render 'posts/post_edit_modal' %>
 <div class="row">
+    <div class="col-sm-4">
+        <%= render 'lists/list_panel' %>
+    </div>
     <div class="col-sm-8">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -35,23 +38,19 @@
                 </p>
                 <footer>
                     <%= render 'posts/likes_comments', :post => @post %>
-                    <span class="g-links" aria-hidden="true">
-                        <%= link_to 'Edit', edit_list_post_path(@post.list, @post), data: { toggle: 'modal', target:"#myModaledit"} %>
-                    </span>
-                    <span class="g-links" aria-hidden="true">
-                        <%= link_to "Delete", [@post.list, @post], :data => {:confirm => "Are you sure?"}, :method => :delete %>
-                    </span>
-                    <span class="g-links" aria-hidden="true">
-                        List: <%= @list.name %>
-                    </span>
                     <div>
                         <%= render 'comments/comments_panel' %>
                     </div>
+                    <span aria-hidden="true">
+                        <%= link_to 'Edit', edit_list_post_path(@post.list, @post), data: { toggle: 'modal', target:"#myModaledit"} %>
+                    </span>
+                    &nbsp;
+                    &nbsp;
+                    <span aria-hidden="true">
+                        <%= link_to "Delete", [@post.list, @post], :data => {:confirm => "Are you sure?"}, :method => :delete %>
+                    </span>
                 </footer>
             </div>
         </div>
-    </div>
-    <div class="col-sm-4">
-        <%= render 'lists/list_panel' %>
     </div>
 </div>

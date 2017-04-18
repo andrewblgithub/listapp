@@ -1,18 +1,16 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
+    <div class="panel-body">
         <h4>
             Return to <%= link_to @list.name, list_posts_path(@list) %>
         </h4>
-    </div>
-    <div class="panel-body">
+        <hr>
         <p>
             <% @list.posts.each do |post| %>
                 <%= link_to post.content, [post.list, post] %>
                 <p>
                     <div class="countdown" data-countdown="<%= post.expires_at %>"></div>
                 </p>
-                <br>
-                <br>
+                <hr>
                 <script type = "text/javascript">
                     $('[data-countdown]').each(function() {
                         var $this = $(this), finalDate = $(this).data('countdown');

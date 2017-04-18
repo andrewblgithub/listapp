@@ -1,9 +1,10 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid container col-sm-8 col-sm-offset-2">
+    
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand remachine" href="/" id="navbar-collapse-1">FOMO</a>
-      
+      <a class="navbar-brand remachine hidden-xs" href="/" id="navbar-collapse-1">FOMO</a>
+
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -11,23 +12,36 @@
         <span class="icon-bar"></span>
       </button>
       
-      <% if controller.controller_name == "posts" || current_page?('/all') || current_page?('/most_likes')%>
-      <a class="btn btn-default" data-toggle="collapse" data-target="#collapseGroup" onclick="location.href='#top'">
+      <!-- List menu button toggles dropdown panel-->
+      <% if controller.controller_name == "posts" || current_page?('/all') || current_page?('/completed') || current_page?('/most_likes')%>
+      <a class="btn btn-default btn-group hidden-lg hidden-md hidden-sm" data-toggle="collapse" data-target="#collapseGroup" style="margin-left: 12px;">
+          <% if current_page?('/all') %>
+          <%= "All Lists" %>
+          <% elsif current_page?('/completed') %>
+          <%= "Completed" %>
+          <% elsif current_page?('/most_likes') %>
+          <%= "Most Likes" %>
+          <% else %>
+          <%= @list.name.truncate(12) %>
+          <% end %>
         <span class="glyphicon glyphicon-menu-down"></span>
       </a>
       <% end %>
       
+      <!-- New Countdown button resizes with page -->
       <% if controller.controller_name == "posts" %>
       <%= link_to new_list_post_path, class:"btn btn-default" do%>
         <span class="glyphicon glyphicon-plus"></span>
+        <span class="hidden-md hidden-sm hidden-xs">New Countdown</span>
       <% end %>
       <% end %>
       
+      <!-- Notification button -->
       <div class="btn-group">
         <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown">
         <span class="glyphicon glyphicon-bell"></span>
         </button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <ul class="dropdown-menu dropdown-menu" role="menu">
           <li><a href="#">New Comment!</a></li>
           <li><a href="#">New Countdown!</a></li>
           <li><a href="#">New List Invite!</a></li>
@@ -36,7 +50,37 @@
         </ul>
       </div>
       <div class="badge badge-notify">5</div>
+      
+      <!-- List menu panel -->
+      <div id="collapseGroup" class="panel-collapse collapse">
+        <div class="panel-body">
+          <a class="navbar-brand remachine visible-xs">FOMO</a>
+          <br>
+          <br>
+          <hr>
+          <h4>Filter by:</h4>
+          <br>
+          <%= link_to "All Lists", '/all' %>
+          <hr>
+          <%= link_to "Most Likes", '/most_likes' %>
+          <hr>
+          <%= link_to "Completed", '/completed' %>
+          <hr>
+          <h4>My Subscribed Lists:</h4>
+          <br>
+          <% List.all.each do |list| %>
+            <%= link_to list.name, list_posts_path(list) %>
+            <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
+            <hr>
+          <% end %>
+          <%= link_to new_list_path, class:"btn btn-default" do%>
+            <span class="glyphicon glyphicon-plus"></span> New List
+          <% end %>
+        </div>
+      </div>
+      
     </div>
+    
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

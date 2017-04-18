@@ -1,9 +1,11 @@
 <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-4">
         <%= render 'layouts/groups' %>
+    </div>
+    <div class="col-sm-8">
         <% Post.all.reorder(:cached_votes_total => :desc).each do |post| %>
             <%= render 'posts/posts', :post => post %>
         <% end %>
-        <%= render 'layouts/footer' %>
+        <hr>
     </div>
 </div>
