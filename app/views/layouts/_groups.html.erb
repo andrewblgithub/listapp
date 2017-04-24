@@ -7,8 +7,10 @@
                 <%= "Completed" %>
                 <% elsif current_page?('/most_likes') %>
                 <%= "Most Likes" %>
+                <% elsif current_page?('/created_by_me') %>
+                <%= "Created by me" %>
                 <% else %>
-                <%= @list.name.truncate(12) %>
+                <%= @list.name %>
                 <% end %>
         </h4>
         <hr>

@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get '/all' => 'pages#all'
   get '/most_likes' => 'pages#most_likes'
   get '/completed' => 'pages#completed'
+  get '/users' => 'pages#users'
+  get '/created_by_me' => 'pages#created_by_me'
   get '/lists/:id/posts' => 'lists#index'
   
   # Define routes for pages

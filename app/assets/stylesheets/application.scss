@@ -51,11 +51,11 @@ body {
 .badge-notify {
     z-index: 100;
     position:relative;
-    margin-right: -30px;
-    -moz-transform: translate(-90%, 80%); /* For Firefox */
-    -ms-transform: translate(-90%, 80%); /* for IE */
-    -webkit-transform: translate(-90%, 80%); /* For Safari, Chrome, iOS */
-    -o-transform: translate(-90%, 80%); /* For Opera */
+    margin-right: -25px;
+    -moz-transform: translate(-100%, 80%); /* For Firefox */
+    -ms-transform: translate(-100%, 80%); /* for IE */
+    -webkit-transform: translate(-100%, 80%); /* For Safari, Chrome, iOS */
+    -o-transform: translate(-100%, 80%); /* For Opera */
     background-color: #ff4d4d;
 }
 

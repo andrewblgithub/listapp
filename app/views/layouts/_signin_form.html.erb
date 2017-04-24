@@ -1,0 +1,17 @@
+<div class="panel">
+    Log In
+    <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <%= f.text_field :email %>
+        <%= f.password_field :password %>
+        <%= f.label :remember_me %>
+        <%= f.check_box :remember_me %>
+        <br>
+        <%= f.submit 'Sign in' %>
+        <br>
+        <%= link_to "Forgot your password?", new_password_path(:user) %>
+    <% end %>
+    <br>
+    Don't have an account?
+    <br>
+    <%= link_to('Sign up here!', new_user_registration_path) %>
+</div>

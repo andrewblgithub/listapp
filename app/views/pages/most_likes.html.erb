@@ -4,7 +4,9 @@
     </div>
     <div class="col-sm-8">
         <% Post.all.reorder(:cached_votes_total => :desc).each do |post| %>
-            <%= render 'posts/posts', :post => post %>
+            <% if post.list.user_id == current_user.id %>
+                <%= render 'posts/posts', :post => post %>
+            <% end %>
         <% end %>
         <hr>
     </div>
