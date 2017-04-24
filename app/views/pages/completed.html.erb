@@ -3,9 +3,11 @@
         <%= render 'layouts/groups' %>
     </div>
     <div class="col-sm-8">
-        <% @posts.each do |post| %>
-            <% if post.expires_at <= Time.now %>
-            <%= render 'posts/posts', :post => post %>
+        <% @lists.each do |list| %>
+            <% list.posts.each do |post| %>
+                <% if post.expires_at <= Time.now %>
+                    <%= render 'posts/posts', :post => post %>
+                <% end %>
             <% end %>
         <% end %>
         <hr>

@@ -7,18 +7,6 @@ class PagesController < ApplicationController
       @lists = current_user.lists
     end
   end
-  
-  def all
-    @posts = current_user.posts
-  end
-  
-  def most_likes
-    @posts = current_user.posts
-  end
-  
-  def completed
-    @posts = current_user.posts
-  end
 
   # back-end code for pages/home
   #def home
