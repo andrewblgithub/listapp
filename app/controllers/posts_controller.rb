@@ -63,6 +63,7 @@ class PostsController < ApplicationController
     
     def set_list
         @list=List.find(params[:list_id])
+        @lists=current_user.lists
     end
     
 end

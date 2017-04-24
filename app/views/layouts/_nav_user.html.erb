@@ -44,32 +44,10 @@
       <% end %>
       
       <!-- Notifications panel -->
-      <div id="collapseGroup" class="panel-collapse collapse">
+      <!--<div id="collapseGroup" class="panel-collapse collapse">
         <div class="panel-body">
-          <a class="navbar-brand remachine visible-xs">FOMO</a>
-          <br>
-          <br>
-          <hr>
-          <h4>Filter by:</h4>
-          <br>
-          <%= link_to "All Lists", '/all' %>
-          <hr>
-          <%= link_to "Most Likes", '/most_likes' %>
-          <hr>
-          <%= link_to "Completed", '/completed' %>
-          <hr>
-          <h4>My Subscribed Lists:</h4>
-          <br>
-          <% List.all.each do |list| %>
-            <%= link_to list.name, list_posts_path(list) %>
-            <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
-            <hr>
-          <% end %>
-          <%= link_to new_list_path, class:"btn btn-default" do%>
-            <span class="glyphicon glyphicon-plus"></span> New List
-          <% end %>
         </div>
-      </div>
+      </div>-->
       
       <!-- List menu panel -->
       <div id="collapseGroup" class="panel-collapse collapse">
@@ -88,7 +66,7 @@
           <hr>
           <h4>My Subscribed Lists:</h4>
           <br>
-          <% List.all.each do |list| %>
+          <% @lists.each do |list| %>
             <%= link_to list.name, list_posts_path(list) %>
             <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
             <hr>

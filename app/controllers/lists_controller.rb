@@ -1,12 +1,12 @@
 class ListsController < ApplicationController
-
+    
     before_action :set_new_list
 
     def index
     end
 
     def show
-        @list=List.find(params[:id])
+        @list=@lists.find(params[:id])
     end
     
     def new
@@ -27,7 +27,7 @@ class ListsController < ApplicationController
         
         def set_new_list
             @newList = List.new
-            @lists = List.all
+            @lists = current_user.lists
         end
 
 end

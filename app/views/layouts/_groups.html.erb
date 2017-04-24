@@ -24,7 +24,7 @@
         <hr>
         <h4>My Subscribed Lists:</h4>
         <br>
-        <% List.all.each do |list| %>
+        <% @lists.each do |list| %>
             <%= link_to list.name, list_posts_path(list) %>
             <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
             <hr>

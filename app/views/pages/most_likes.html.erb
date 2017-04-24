@@ -3,7 +3,7 @@
         <%= render 'layouts/groups' %>
     </div>
     <div class="col-sm-8">
-        <% Post.all.reorder(:cached_votes_total => :desc).each do |post| %>
+        <% @posts.reorder(:cached_votes_total => :desc).each do |post| %>
             <% if post.list.user_id == current_user.id %>
                 <%= render 'posts/posts', :post => post %>
             <% end %>

@@ -1,9 +1,23 @@
 # The pages controller contains all of the code for any page inside of /pages
 class PagesController < ApplicationController
+  before_action :set_pages
+
+  def set_pages
+    if user_signed_in?
+      @lists = current_user.lists
+    end
+  end
   
-  # back-end code for pages/index
-  def index
-    @newPost = Post.new
+  def all
+    @posts = current_user.posts
+  end
+  
+  def most_likes
+    @posts = current_user.posts
+  end
+  
+  def completed
+    @posts = current_user.posts
   end
 
   # back-end code for pages/home

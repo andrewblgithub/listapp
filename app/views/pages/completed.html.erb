@@ -3,8 +3,8 @@
         <%= render 'layouts/groups' %>
     </div>
     <div class="col-sm-8">
-        <% Post.all.each do |post| %>
-            <% if post.expires_at <= Time.now && post.list.user_id == current_user.id %>
+        <% @posts.each do |post| %>
+            <% if post.expires_at <= Time.now %>
             <%= render 'posts/posts', :post => post %>
             <% end %>
         <% end %>

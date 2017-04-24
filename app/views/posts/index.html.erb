@@ -4,7 +4,7 @@
     </div>
     <div class="col-sm-8">
         <% @list.posts.each do |post| %>
-            <% if post.expires_at > Time.now && @list.user_id == current_user.id %>
+            <% if post.expires_at > Time.now %>
                 <%= render '/posts/posts', :post => post %>
             <% end %>
         <% end %>
