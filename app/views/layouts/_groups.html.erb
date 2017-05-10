@@ -16,17 +16,19 @@
         <hr>
         <h4>Filter by:</h4>
         <br>
-        <%= link_to "All Lists", '/all' %>
+        <%= link_to "All Lists", '/all', :class=>"btn btn-links"  %>
         <hr>
-        <%= link_to "Most Likes", '/most_likes' %>
+        <%= link_to "Most Likes", '/most_likes', :class=>"btn btn-links"  %>
         <hr>
-        <%= link_to "Completed", '/completed' %>
+        <%= link_to "Completed", '/completed', :class=>"btn btn-links"  %>
         <hr>
         <h4>My Subscribed Lists:</h4>
         <br>
         <% @lists.each do |list| %>
-            <%= link_to list.name, list_posts_path(list) %>
-            <span style="float:right;" class="glyphicon glyphicon-option-vertical"></span>
+            <%= link_to list.name, list_posts_path(list), :class=>"btn btn-links" %>
+            <span style="float:right;">
+                 <%= link_to "", [list], :class=>"glyphicon glyphicon-option-vertical btn btn-links" %>
+            </span>
             <hr>
         <% end %>
         <%= link_to new_list_path, class:"btn btn-default" do%>

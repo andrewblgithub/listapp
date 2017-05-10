@@ -38,6 +38,9 @@ body {
     overflow-y: scroll;
     -webkit-overflow-scrolling:touch; // mobile safari
 }
+.navbar::-webkit-scrollbar { 
+    display: none; 
+}
 
 .navbar-brand {
     font-family: "SansPosterBold";

@@ -20,6 +20,22 @@ class ListsController < ApplicationController
         redirect_to ""
     end
     
+    def edit
+        @list = List.find(params[:id])
+    end
+    
+    def update
+        @list = @lists.find(params[:id])
+        @list.update(list_params)
+        redirect_to :back
+    end
+    
+    def destroy
+        @list = @lists.find(params[:id])
+        @list.destroy
+        redirect_to "/"
+    end
+    
     private
         def list_params # allows certain data to be passed via form
             params.require(:list).permit(:user_id, :name)

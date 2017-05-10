@@ -1,1 +1,20 @@
-<%= render '/lists/lists' %>
+<div class="panel panel-default col-sm-8 col-sm-offset-2">
+    <div class="panel-body">
+        <h4>
+            <%= @list.name %> Options:
+        </h4>
+        <%= link_to "Delete List", (list_path(@list)), :data => {:confirm => "Are you sure?"}, :method => :delete %>
+        <br>
+        <hr>
+        <h4>
+            Add Group Members:
+        </h4>
+        <% User.all.each do |user| %>
+        <a class="btn btn-default">
+             <%= user.username %>
+        </a>
+        <br>
+        <br>
+        <% end %>
+    </div>
+</div>
