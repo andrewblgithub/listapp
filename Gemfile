@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby "2.3.3"
 # helpers for timezone localization
 gem 'local_time'
 # jquery bootstrap selecter
@@ -9,31 +8,35 @@ gem 'acts-as-taggable-on'
 # acts_as_votable add likes function
 gem 'acts_as_votable', '~> 0.10.0'
 # countdown-timer jquery
-gem 'jquery-final_countdown-rails'
+#gem 'jquery-final_countdown-rails'
 # datetimepicker for form
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 # Devise gem for authentication and user accounts
-gem 'devise'
+gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+gem 'erubis'
 # for UI components including navbar
 gem 'bootstrap-sass', '~> 3.3.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.1'
 # Use squlite for dev database
 group :development, :test do
   gem 'sqlite3'
 end
 # Use pg for Heroku database and 12factor Heroku pre-req
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+   gem 'mysql2'
+#  gem 'rails_12factor'
 end
+
+gem 'sass-rails'
+gem 'uglifier'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+#gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+#gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -62,7 +65,9 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
+  
+  gem 'listen'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

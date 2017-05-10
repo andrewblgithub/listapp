@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -14,111 +13,104 @@
 ActiveRecord::Schema.define(version: 20170420193553) do
 
   create_table "comments", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "post_id"
-    t.integer  "user_id"
+    t.text "content"
+    t.integer "post_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "username"
+    t.string "username"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
-
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "lists", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "user_id"
+    t.string "name"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "created_at"], name: "index_lists_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
-  add_index "lists", ["user_id", "created_at"], name: "index_lists_on_user_id_and_created_at"
-  add_index "lists", ["user_id"], name: "index_lists_on_user_id"
-
   create_table "memberships", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "list_id"
+    t.integer "user_id"
+    t.integer "list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.datetime "expires_at"
-    t.integer  "cached_votes_total"
-    t.string   "image"
-    t.text     "description"
-    t.string   "list"
-    t.integer  "list_id"
-    t.string   "username"
+    t.integer "cached_votes_total"
+    t.string "image"
+    t.text "description"
+    t.string "list"
+    t.integer "list_id"
+    t.string "username"
+    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
-
-  add_index "posts", ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "taggings", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.integer  "tagger_id"
-    t.string   "tagger_type"
-    t.string   "context",       limit: 128
+    t.integer "tag_id"
+    t.integer "taggable_id"
+    t.string "taggable_type"
+    t.integer "tagger_id"
+    t.string "tagger_type"
+    t.string "context", limit: 128
     t.datetime "created_at"
+    t.index ["context"], name: "index_taggings_on_context"
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+    t.index ["tag_id"], name: "index_taggings_on_tag_id"
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
+    t.index ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
+    t.index ["taggable_id"], name: "index_taggings_on_taggable_id"
+    t.index ["taggable_type"], name: "index_taggings_on_taggable_type"
+    t.index ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
+    t.index ["tagger_id"], name: "index_taggings_on_tagger_id"
   end
-
-  add_index "taggings", ["context"], name: "index_taggings_on_context"
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
-  add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context"
-  add_index "taggings", ["taggable_id", "taggable_type", "tagger_id", "context"], name: "taggings_idy"
-  add_index "taggings", ["taggable_id"], name: "index_taggings_on_taggable_id"
-  add_index "taggings", ["taggable_type"], name: "index_taggings_on_taggable_type"
-  add_index "taggings", ["tagger_id", "tagger_type"], name: "index_taggings_on_tagger_id_and_tagger_type"
-  add_index "taggings", ["tagger_id"], name: "index_taggings_on_tagger_id"
 
   create_table "tags", force: :cascade do |t|
-    t.string  "name"
+    t.string "name"
     t.integer "taggings_count", default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true
   end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "username"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
   create_table "votes", force: :cascade do |t|
-    t.integer  "votable_id"
-    t.string   "votable_type"
-    t.integer  "voter_id"
-    t.string   "voter_type"
-    t.boolean  "vote_flag"
-    t.string   "vote_scope"
-    t.integer  "vote_weight"
+    t.integer "votable_id"
+    t.string "votable_type"
+    t.integer "voter_id"
+    t.string "voter_type"
+    t.boolean "vote_flag"
+    t.string "vote_scope"
+    t.integer "vote_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
-
-  add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
-  add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
 
 end
